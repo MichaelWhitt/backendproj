@@ -1,6 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
-const campsiteRouter = require('./routes/campsiteRouter');
+const pageRouter = require('./routes/pageRouter');
 
 const hostname = 'localhost';
 
@@ -10,7 +10,7 @@ const app = express();
 app.use(morgan('dev'));
 app.use(express.json());
 
-app.use('/campsites', campsiteRouter);
+app.use('/pages', pageRouter);
 
 app.use(express.static(__dirname + '/public'));
 
